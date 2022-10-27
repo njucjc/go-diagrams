@@ -12,16 +12,6 @@ var Grow = &growContainer{
 	path: "assets/firebase/grow",
 }
 
-func (c *growContainer) Invites(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/invites.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *growContainer) Messaging(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/messaging.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *growContainer) Predictions(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/predictions.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -49,5 +39,15 @@ func (c *growContainer) DynamicLinks(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *growContainer) InAppMessaging(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/in-app-messaging.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *growContainer) Invites(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/invites.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *growContainer) Messaging(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/messaging.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

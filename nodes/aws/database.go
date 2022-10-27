@@ -12,28 +12,8 @@ var Database = &databaseContainer{
 	path: "assets/aws/database",
 }
 
-func (c *databaseContainer) Dynamodb(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/dynamodb.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *databaseContainer) Neptune(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/neptune.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *databaseContainer) Aurora(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/aurora.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *databaseContainer) DatabaseMigrationService(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/database-migration-service.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *databaseContainer) Database(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/database.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -42,8 +22,8 @@ func (c *databaseContainer) DocumentdbMongodbCompatibility(opts ...diagram.NodeO
 	return diagram.NewNode(nopts...)
 }
 
-func (c *databaseContainer) Elasticache(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/elasticache.png")}, c.opts, opts)
+func (c *databaseContainer) QuantumLedgerDatabaseQldb(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/quantum-ledger-database-qldb.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -57,18 +37,8 @@ func (c *databaseContainer) Timestream(opts ...diagram.NodeOption) *diagram.Node
 	return diagram.NewNode(nopts...)
 }
 
-func (c *databaseContainer) DynamodbDax(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/dynamodb-dax.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *databaseContainer) QuantumLedgerDatabaseQldb(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/quantum-ledger-database-qldb.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *databaseContainer) Redshift(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/redshift.png")}, c.opts, opts)
+func (c *databaseContainer) Aurora(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/aurora.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -79,6 +49,36 @@ func (c *databaseContainer) DynamodbGlobalSecondaryIndex(opts ...diagram.NodeOpt
 
 func (c *databaseContainer) DynamodbTable(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/dynamodb-table.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *databaseContainer) Neptune(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/neptune.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *databaseContainer) Database(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/database.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *databaseContainer) Elasticache(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/elasticache.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *databaseContainer) Redshift(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/redshift.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *databaseContainer) DynamodbDax(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/dynamodb-dax.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *databaseContainer) Dynamodb(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/database/dynamodb.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 

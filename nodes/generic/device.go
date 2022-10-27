@@ -12,12 +12,12 @@ var Device = &deviceContainer{
 	path: "assets/generic/device",
 }
 
-func (c *deviceContainer) Mobile(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/device/mobile.png")}, c.opts, opts)
+func (c *deviceContainer) Tablet(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/device/tablet.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *deviceContainer) Tablet(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/device/tablet.png")}, c.opts, opts)
+func (c *deviceContainer) Mobile(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/device/mobile.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

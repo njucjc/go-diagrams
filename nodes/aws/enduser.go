@@ -12,6 +12,11 @@ var Enduser = &enduserContainer{
 	path: "assets/aws/enduser",
 }
 
+func (c *enduserContainer) Workspaces(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/enduser/workspaces.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *enduserContainer) Appstream20(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/enduser/appstream-2-0.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -24,10 +29,5 @@ func (c *enduserContainer) Workdocs(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *enduserContainer) Worklink(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/enduser/worklink.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *enduserContainer) Workspaces(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/enduser/workspaces.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

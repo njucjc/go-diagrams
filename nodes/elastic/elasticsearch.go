@@ -12,8 +12,13 @@ var Elasticsearch = &elasticsearchContainer{
 	path: "assets/elastic/elasticsearch",
 }
 
-func (c *elasticsearchContainer) Monitoring(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/elasticsearch/monitoring.png")}, c.opts, opts)
+func (c *elasticsearchContainer) Beats(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/elasticsearch/beats.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *elasticsearchContainer) Maps(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/elasticsearch/maps.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -27,23 +32,18 @@ func (c *elasticsearchContainer) Sql(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
+func (c *elasticsearchContainer) Monitoring(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/elasticsearch/monitoring.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *elasticsearchContainer) Alerting(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/elasticsearch/alerting.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *elasticsearchContainer) Beats(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/elasticsearch/beats.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *elasticsearchContainer) Elasticsearch(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/elasticsearch/elasticsearch.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *elasticsearchContainer) Maps(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/elasticsearch/maps.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 

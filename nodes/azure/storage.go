@@ -12,8 +12,8 @@ var Storage = &storageContainer{
 	path: "assets/azure/storage",
 }
 
-func (c *storageContainer) Azurefxtedgefiler(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/azurefxtedgefiler.png")}, c.opts, opts)
+func (c *storageContainer) TableStorage(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/table-storage.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -22,33 +22,8 @@ func (c *storageContainer) DataBoxEdgeDataBoxGateway(opts ...diagram.NodeOption)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) NetappFiles(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/netapp-files.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *storageContainer) TableStorage(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/table-storage.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *storageContainer) StorsimpleDeviceManagers(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/storsimple-device-managers.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *storageContainer) ArchiveStorage(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/archive-storage.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *storageContainer) BlobStorage(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/blob-storage.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *storageContainer) DataBox(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/data-box.png")}, c.opts, opts)
+func (c *storageContainer) QueuesStorage(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/queues-storage.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -62,8 +37,28 @@ func (c *storageContainer) StorageAccounts(opts ...diagram.NodeOption) *diagram.
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) StorageExplorer(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/storage-explorer.png")}, c.opts, opts)
+func (c *storageContainer) StorageSyncServices(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/storage-sync-services.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) Azurefxtedgefiler(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/azurefxtedgefiler.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) NetappFiles(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/netapp-files.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) ArchiveStorage(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/archive-storage.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) BlobStorage(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/blob-storage.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -72,8 +67,13 @@ func (c *storageContainer) GeneralStorage(opts ...diagram.NodeOption) *diagram.N
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) QueuesStorage(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/queues-storage.png")}, c.opts, opts)
+func (c *storageContainer) StorsimpleDataManagers(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/storsimple-data-managers.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) DataBox(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/data-box.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -82,12 +82,12 @@ func (c *storageContainer) DataLakeStorage(opts ...diagram.NodeOption) *diagram.
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) StorageSyncServices(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/storage-sync-services.png")}, c.opts, opts)
+func (c *storageContainer) StorageExplorer(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/storage-explorer.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) StorsimpleDataManagers(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/storsimple-data-managers.png")}, c.opts, opts)
+func (c *storageContainer) StorsimpleDeviceManagers(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/storsimple-device-managers.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
